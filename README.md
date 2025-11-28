@@ -88,9 +88,9 @@ Icon source:
 https://openweathermap.org/img/wn/{icon}@2x.png
 
 📸 Screenshots
-Application UI
+![App UI](./screenshots/ui.png)
+![Terminal Output](./screenshots/terminal.png)
 
-Terminal Compilation Output
 
 These images show the working UI and successful build logs required for the lab submission.
 
