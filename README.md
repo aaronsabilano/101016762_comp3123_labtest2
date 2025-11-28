@@ -33,9 +33,7 @@ The UI displays:
 ![Dynamic search functionality](./screenshots/dynamic%20search.png)
 
 
-
-📁 Project Structure
-![Project Structure](./screenshots/Project_Structure.png)
+![Project Structure](./screenshots/Project%20Structure.png)
 
 How to Running the Project Locally
 1. Clone the repository:
@@ -44,12 +42,11 @@ git clone https://github.com/aaronsabilano/101016762_comp3123_labtest2
 2. Install dependencies:
 npm install
 
-3. Create a .env file in the project root:
+3. Create a .env file in the project root with YOUR api key:
 REACT_APP_WEATHER_API_KEY=YOUR_API_KEY_HERE
 
 4. Start the development server:
 npm start
-
 
 The app will open at:
 
