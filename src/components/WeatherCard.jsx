@@ -1,19 +1,17 @@
-// src/components/WeatherCard.jsx
+// Shows the weather info that comes from the API.
+// App.js handles the fetching — this component just displays it.
+
 import React from "react";
 
 function WeatherCard({ data }) {
-  // Destructure the main parts of the JSON response
+  //Here I pull out the main parts from the API response
   const { name, sys, main, weather, wind } = data;
 
-  // The "weather" array usually has one main object we care about
+  // The weather usually only has one object with a description
   const condition = weather && weather[0] ? weather[0] : null;
 
-  // Icon URL based on the icon code from the API (e.g. "10d")
-  const iconUrl = condition
-    ? `https://openweathermap.org/img/wn/${condition.icon}@2x.png`
-    : null;
-
-  // Current temperature and extras (already Celsius from units=metric)
+  // temps 
+  // (already in Celsius because we passed units=metric)
   const tempC = main?.temp;
   const feelsLike = main?.feels_like;
   const minTemp = main?.temp_min;
@@ -21,39 +19,30 @@ function WeatherCard({ data }) {
 
   return (
     <div className="weather-card">
-      {/* Top section: location, description, big temperature, icon */}
+      {/* top section with city + temp */}
       <div className="weather-main">
         <div className="weather-left">
           <h2 className="weather-location">
             {name}
+            {/* optional: some places might not have a country code */}
             {sys?.country ? `, ${sys.country}` : ""}
           </h2>
 
+          {/* short description (e.g. Clouds • scattered clouds) */}
           {condition && (
             <p className="weather-description">
-              {condition.main} &bull; {condition.description}
+              {condition.main} • {condition.description}
             </p>
           )}
 
+          {/* big temperature number */}
           {typeof tempC === "number" && (
-            <p className="weather-temp">
-              {Math.round(tempC)}°C
-            </p>
+            <p className="weather-temp">{Math.round(tempC)}°C</p>
           )}
         </div>
-
-        {iconUrl && (
-          <div className="weather-icon-wrapper">
-            <img
-              className="weather-icon"
-              src={iconUrl}
-              alt={condition?.description || "Weather icon"}
-            />
-          </div>
-        )}
       </div>
 
-      {/* Bottom section: details grid (feels like, min/max, humidity, wind) */}
+      {/* bottom details (feels like, humidity, etc.) */}
       <div className="weather-details">
         <div className="detail-item">
           <span className="label">Feels like</span>

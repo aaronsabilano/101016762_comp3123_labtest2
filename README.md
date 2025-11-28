@@ -1,71 +1,51 @@
 101016762_comp3123_labtest2 – Simple Weather App
 
-A weather search application built using React, demonstrating API fetching, component-based UI, dynamic content updates, and responsive design.
-This project was created for COMP3123 – Lab Test 2.
-
-🌤️ Overview
+I decided to use openweathermap api and create A weather search application 
 
 This application allows users to search for any city and view the current weather based on data from the OpenWeatherMap API.
 The UI displays:
 
-Temperature (°C)
+### Temperature (°C)
+![Temperature](./screenshots/temperature.png)
 
-Weather condition & description
+### Weather condition & description
+![Weather condition & description](./screenshots/weather%20conditions%20and%20descriptions.png)
 
-Country + city name
+### Country + city name
+![Country + city name](./screenshots/Country%20and%20City.png)
 
-Feels-like temperature
+### Feels-like temperature
+![Feels-like temperature](./screenshots/feels%20like.png)
 
-Min/Max temperature
+### Min/Max temperature
+![Min/Max temperature](./screenshots/min%20max.png)
 
-Humidity
+### Humidity
+*(Add screenshot here if needed)*
 
-Wind speed
+### Wind speed
+![Wind speed](./screenshots/wind%20speed.png)
 
-Weather icon (from OpenWeatherMap)
+### Weather icon (from OpenWeatherMap)
+![Weather icon](./screenshots/weather%20icon.png)
 
-Dynamic search functionality
+### Dynamic search functionality
+![Dynamic search functionality](./screenshots/dynamic%20search.png)
 
-🛠️ Tech Stack
 
-React (Create React App)
-
-JavaScript (ES6+)
-
-OpenWeatherMap API
-
-CSS (custom theming)
 
 📁 Project Structure
-101016762_comp3123_labtest2/
-│── public/
-│── src/
-│   ├── components/
-│   │   ├── SearchBar.jsx
-│   │   └── WeatherCard.jsx
-│   ├── services/
-│   │   └── weatherApi.js
-│   ├── App.js
-│   ├── App.css
-│   ├── index.js
-│   └── index.css
-│── .env (not pushed to GitHub)
-│── README.md
-│── package.json
+![Project Structure](./screenshots/Project_Structure.png)
 
-🔧 Running the Project Locally
+How to Running the Project Locally
 1. Clone the repository:
-git clone https://github.com/<your-username>/101016762_comp3123_labtest2.git
+git clone https://github.com/aaronsabilano/101016762_comp3123_labtest2
 
 2. Install dependencies:
 npm install
 
 3. Create a .env file in the project root:
 REACT_APP_WEATHER_API_KEY=YOUR_API_KEY_HERE
-
-
-⚠️ Do NOT wrap the key in quotes.
-⚠️ Restart npm start every time you change .env.
 
 4. Start the development server:
 npm start
@@ -83,45 +63,8 @@ Endpoint:
 https://api.openweathermap.org/data/2.5/weather?q={CITY}&appid={API_KEY}&units=metric
 
 
-Icon source:
-
-https://openweathermap.org/img/wn/{icon}@2x.png
-
 📸 Screenshots
 ![App UI](./screenshots/ui.png)
 ![Terminal Output](./screenshots/terminal.png)
 
 
-These images show the working UI and successful build logs required for the lab submission.
-
-🚀 Deployment (Optional for Lab)
-
-You can deploy using:
-
-Vercel
-
-Netlify
-
-Render
-
-GitHub Pages
-
-Make sure to add your API key as an environment variable in the hosting provider.
-
-✔️ Lab Requirements Checklist
-
- App + GitHub repo named correctly
-
- Weather API integrated
-
- Icons, theme, font styling
-
- Search bar (dynamic content)
-
- Displays all required weather fields
-
- Custom UI based on response
-
- README with screenshots
-
- Hosted link (optional)
